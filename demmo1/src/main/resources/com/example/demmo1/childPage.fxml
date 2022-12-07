@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -11,7 +12,6 @@
     <children>
         <AnchorPane layoutY="54.0" prefHeight="347.0" prefWidth="700.0" style="-fx-background-color: white;">
             <children>
-                <HBox layoutX="15.0" layoutY="7.0" prefHeight="268.0" prefWidth="668.0" />
                 <TextField fx:id="fieldName" layoutX="15.0" layoutY="275.0" promptText="Имя" />
                 <TextField fx:id="fieldSecondName" layoutX="167.0" layoutY="275.0" promptText="Фамилия" />
                 <TextField fx:id="fieldThirdName" layoutX="319.0" layoutY="275.0" promptText="Отчество" />
@@ -20,6 +20,16 @@
                 <Button fx:id="buttonAdd" layoutX="482.0" layoutY="289.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="100.0" text="Добавить" />
                 <Button fx:id="buttonDelete" layoutX="582.0" layoutY="289.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="100.0" text="Удалить" />
             <TextField fx:id="fieldGroup" layoutX="319.0" layoutY="308.0" promptText="Группа" />
+            <TableView fx:id="tableChild" layoutX="13.0" layoutY="2.0" prefHeight="271.0" prefWidth="675.0">
+              <columns>
+                <TableColumn fx:id="columnNameChild" prefWidth="151.0" text="Имя" />
+                <TableColumn fx:id="columnSecondNameChild" prefWidth="165.0" text="Фамилия" />
+                  <TableColumn fx:id="columnThirdNameChild" prefWidth="179.0" text="Отчество" />
+                  <TableColumn fx:id="columnGenderChild" prefWidth="33.0" text="Пол" />
+                  <TableColumn fx:id="columnAgeChild" prefWidth="51.0" text="Возраст" />
+                  <TableColumn fx:id="columnGroupChild" prefWidth="95.0" text="Группа" />
+              </columns>
+            </TableView>
             </children>
         </AnchorPane>
       <Button fx:id="buttonBack" layoutX="634.0" layoutY="26.0" mnemonicParsing="false" text="Назад" />
